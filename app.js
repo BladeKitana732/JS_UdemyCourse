@@ -1,30 +1,49 @@
-//Numbers & math object
+//String Methods and concatenation 
 
-const num1 = 100;
-const num2 = 50;
+const firstName = 'William';
+const lastName = 'Johnson';
+const age = 36;
+const str = 'Hello there my name is Brad';
+const tags = 'web design, html, javascript, react';
+
 let val;
 
-//simple math
-val = num1 + num2;
-val = num1 * num2;
-val = num1 - num2;
-val = num1 / num2;
-val = num1 % num2; //remainder
+val = firstName + lastName;
 
-// Math object 
-val = Math.PI;
-val = Math.E;
-val = Math.round(2.8);//rounds to 3; 
-val = Math.ceil(2.4);//round up even if below .5
-val = Math.floor(2.8);//round down 
-val = Math.sqrt(64);
-val = Math.abs(-3);//gives absolute number
-val = Math.pow(8, 2);//power of a number
-val = Math.min(2, 33, 45, -5);//returns min
-val = Math.max(2, 33, 45, -5);
-val = Math.random();//decimal
+//Concatenation
+val = firstName + ' ' + lastName;
 
-val = Math.floor(Math.random() * 20);//random whole number 
+//Appending - add on
+val = 'Brad ';
+val += 'Traversy';
+
+val = 'Hello, my name is ' + firstName + ' and I am ' + age;
+
+//Escaping 
+val = 'That\'s awesome, I can\'t wait';
+
+//Methods
+val = firstName.length; //property not a method so () is not needed
+val = firstName.concat(' ', lastName);
+val = firstName.toUpperCase();
+val = firstName.toLowerCase();
+val = firstName.indexOf('l');
+val = firstName.lastIndexOf('l');
+val = firstName.charAt('2');
+val = firstName.charAt(firstName.length -1); //last character formula 
+val = firstName.substring(0, 4);//returns Will
+val = firstName.slice(0,4);//mostly used to pull things out of arrays; similar to substring
+val = firstName.slice(-3);
+val = str.split(' ');//array by space between 
+val = tags.split(',');//array of each tag 
+val = str.replace('Brad', 'Jack');//replaces 
+val = str.includes('Hello');
+
+//can treat strings like read only arrays 
+// val = firstName[0];
+
+
+
+
 
 console.log(val);
-
