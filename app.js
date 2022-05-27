@@ -1,53 +1,30 @@
-//Type conversion - taking variable and changing data type; 
+//Numbers & math object
 
+const num1 = 100;
+const num2 = 50;
 let val;
 
-//Number to string 
-val = String(555);
-val = String(4+4);
+//simple math
+val = num1 + num2;
+val = num1 * num2;
+val = num1 - num2;
+val = num1 / num2;
+val = num1 % num2; //remainder
 
-//Boolean  to string
- val = String(true);
+// Math object 
+val = Math.PI;
+val = Math.E;
+val = Math.round(2.8);//rounds to 3; 
+val = Math.ceil(2.4);//round up even if below .5
+val = Math.floor(2.8);//round down 
+val = Math.sqrt(64);
+val = Math.abs(-3);//gives absolute number
+val = Math.pow(8, 2);//power of a number
+val = Math.min(2, 33, 45, -5);//returns min
+val = Math.max(2, 33, 45, -5);
+val = Math.random();//decimal
 
- //date to string
- val = String(new Date());
+val = Math.floor(Math.random() * 20);//random whole number 
 
- //array to string
- val = String([1,2,3,4]);
-
-//toString()
-val = (5).toString();
-val = (true).toString();
-
-//String to number
-val = Number('5');
- 
-//Boolean to number
-val = Number(true);
-val = Number(false);
-val = Number(null);
-
-//NaN - not a number 
-val = Number('hello');
-val = Number([1,2,3]);
-
-//parseInt
-val = parseInt('100');
-val = parseFloat('100.30');//decimals
-
-//Output 
-// console.log(val);
-// console.log(typeof val);
-// //console.log(val.length); //length only works on strings
-// console.log(val.toFixed(2));//specify decimals. only works on numbers
-
-//string + num == string/ type coercion 
-const val1 = String(5);
-const val2 = 6;
-
-const sum = Number(val1 + val2);
-
-console.log(sum);
-console.log(typeof sum);
-
+console.log(val);
 
