@@ -1,49 +1,39 @@
-//String Methods and concatenation 
+//Template literals 
+//inserting HTML through Javascript 
 
-const firstName = 'William';
-const lastName = 'Johnson';
-const age = 36;
-const str = 'Hello there my name is Brad';
-const tags = 'web design, html, javascript, react';
+const name = 'John';
+const age = 31;
+const job = 'Web Dev';
+const city = 'Miami';
+let html;
 
-let val;
+//w/o template strings (ES5)
+html = '<ul><li>Name: '+ name + '</li><li>Age:' + age + '</li><li>Job:' + job + '</li><li>City:' + city + '</li></ul>';
 
-val = firstName + lastName;
+html = '<ul>' + 
+       '</li><li>Name: ' + name + '</li>' +
+       '</li><li>Age: ' + age + '</li>' +
+       '</li><li>Job: ' + job + '</li>'+
+       '</li><li>City: ' + city + '</li>' +
+       '</ul>';
 
-//Concatenation
-val = firstName + ' ' + lastName;
-
-//Appending - add on
-val = 'Brad ';
-val += 'Traversy';
-
-val = 'Hello, my name is ' + firstName + ' and I am ' + age;
-
-//Escaping 
-val = 'That\'s awesome, I can\'t wait';
-
-//Methods
-val = firstName.length; //property not a method so () is not needed
-val = firstName.concat(' ', lastName);
-val = firstName.toUpperCase();
-val = firstName.toLowerCase();
-val = firstName.indexOf('l');
-val = firstName.lastIndexOf('l');
-val = firstName.charAt('2');
-val = firstName.charAt(firstName.length -1); //last character formula 
-val = firstName.substring(0, 4);//returns Will
-val = firstName.slice(0,4);//mostly used to pull things out of arrays; similar to substring
-val = firstName.slice(-3);
-val = str.split(' ');//array by space between 
-val = tags.split(',');//array of each tag 
-val = str.replace('Brad', 'Jack');//replaces 
-val = str.includes('Hello');
-
-//can treat strings like read only arrays 
-// val = firstName[0];
+//with template strings
+function hello() {
+    return 'hello';
+}
 
 
+html = `
+    <ul>
+        <li>Name: ${name}</li>
+        <li>Age: ${age}</li>
+        <li>Job: ${job}</li>
+        <li>City: ${city}</li>
+        <li>${2 + 2}</li>
+        <li>${hello()}</li>
+        <li>${age > 30 ? 'Over 30' : 'Under 30'}</li> 
 
+    </ul>
+`;
 
-
-console.log(val);
+document.body.innerHTML = html;
