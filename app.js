@@ -10,7 +10,7 @@ const person = {
         state: 'FL',
     },
     getBirthYear: function(){
-        return 1987;
+        return 2017 - this.age;//pulling age from object 
     }
 }
 
@@ -27,4 +27,15 @@ val = person.address.state;//val = person.address['state'] returns same
 val = person.getBirthYear();
 
 
+
 console.log(val);
+
+const people = [
+    {name: 'John', age: 30},
+    {name: 'Mike', age: 23},
+    {name: 'Nancy', age: 40}
+];
+
+for(let i = 0; i < people.length; i++) {
+    console.log(people[i].name);
+}
