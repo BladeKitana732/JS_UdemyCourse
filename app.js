@@ -1,28 +1,50 @@
-// Log to console
-console.log('Hello World');
-console.log(123);
-console.log(true);
-var greeting = 'Hello';
-console.log(greeting);
-console.log([1,2,3,4]);
-console.log({a:1, b:2});
-console.table({a:1, b:2});
+// var, let(adv with block level scoping), const; can reassign value w/ var or let
 
-console.error('This is some error');
-console.warn('this is a warning');
+// var name = 'John Doe';
+// console.log(name);
+// name = 'Steve Smith';
+// console.log(name);
 
-console.time('Hello');
-    console.log('You timed me');
-    console.log('You timed me');
-    console.log('You timed me');
-    console.log('You timed me');
-    console.log('You timed me');
-console.timeEnd('Hello');
+// //Init var
+// var greeting;
+// console.log(greeting); //returns undefined
+// greeting = 'Hello';
+// console.log(greeting);
 
-console.clear();
+// //letter, numbers, _(used for private variables in JS patterns), $(used w. jquery selecting things from the DOM)
+// //Cannot start w. a number
 
-/*
-multi 
-line 
-comments
-*/
+// //multi word vars 
+// var firstName = 'John'; //Camel case
+// var first_name = 'Sara'; //snake/underscore method
+// var FirstName = 'Tom'; //Pascal case
+// var firstname; 
+
+//LET
+
+// let name = 'John Doe';
+// console.log(name);
+// name = 'Steve Smith';
+// console.log(name);
+
+//CONST cannot be reassigned 
+// have to assign a value; cannot be undefined 
+
+const person = {
+    name: 'John',
+    age: 30
+}
+
+//mutate; change object data 
+person.name = 'Sara';
+person.age = 32;
+
+// console.log(person);
+
+const numbers = [1,2,3,4,5];
+//mutation 
+numbers.push(6);
+
+console.log(numbers);
+
+//array or objects are mutable
