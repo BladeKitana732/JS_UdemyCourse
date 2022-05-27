@@ -1,50 +1,21 @@
-// var, let(adv with block level scoping), const; can reassign value w/ var or let
+//Primitive data types: string, number, boolean, null, undefined, symbols (ES6)
 
-// var name = 'John Doe';
-// console.log(name);
-// name = 'Steve Smith';
-// console.log(name);
+const name = 'John Doe';
+const age = 45;
+const hasKids = false;
+const car = null;
+let test;
+const sym = Symbol();
 
-// //Init var
-// var greeting;
-// console.log(greeting); //returns undefined
-// greeting = 'Hello';
-// console.log(greeting);
+console.log(typeof test);
 
-// //letter, numbers, _(used for private variables in JS patterns), $(used w. jquery selecting things from the DOM)
-// //Cannot start w. a number
+//Reference/Objects: Arrays, Object literals, Functions, Dates, anything else...
 
-// //multi word vars 
-// var firstName = 'John'; //Camel case
-// var first_name = 'Sara'; //snake/underscore method
-// var FirstName = 'Tom'; //Pascal case
-// var firstname; 
-
-//LET
-
-// let name = 'John Doe';
-// console.log(name);
-// name = 'Steve Smith';
-// console.log(name);
-
-//CONST cannot be reassigned 
-// have to assign a value; cannot be undefined 
-
-const person = {
-    name: 'John',
-    age: 30
+const hobbies = ['movies', 'music'];
+const address = {
+    city: 'Boston',
+    state: 'MA'
 }
+const today = new Date();
 
-//mutate; change object data 
-person.name = 'Sara';
-person.age = 32;
-
-// console.log(person);
-
-const numbers = [1,2,3,4,5];
-//mutation 
-numbers.push(6);
-
-console.log(numbers);
-
-//array or objects are mutable
+console.log(today);
