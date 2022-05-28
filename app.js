@@ -1,43 +1,46 @@
-// switch statement 
+//Function (blocks of code that can be used) declarations & expressions
 
-const color = 'yellow';
-
-switch(color){
-    case 'red':
-        console.log('color is red');
-        break;
-    case 'blue':
-        console.log('color is blue');
-        break;
-    default:
-        console.log('Color is not red or blue');
-        break;        
+function greet(firstName = 'John', lastName = 'Doe') { //can set default w/in parameter ES6
+    // if(typeof firstName === 'undefined'){firstName = 'John'}//default for ES5
+    // if(typeof lastName === 'undefined'){lastName = 'Doe'}//default for ES5
+    //console.log('hello');
+    return 'hello ' + firstName + ' ' + lastName;
 }
 
-let day; 
+// console.log(greet());
 
-switch(new Date().getDay()) {
-    case 0:
-        day = 'Sunday';
-        break;
-    case 1:
-        day = 'Monday';
-        break; 
-    case 2:
-        day = 'Tuesday';
-        break;
-    case 3:
-        day = 'Wednesday';
-        break;
-    case 4:
-        day = 'Thursday';
-        break;
-    case 5:
-        day = 'Friday';
-        break;
-    case 6:
-        day = 'Saturday';
-        break;
+//Expressions 
+
+const square = function(x = 3) { //treating 3 as the default 
+    return x * x;
+};
+
+// console.log(square());
+
+//IIFEs - function declared and ran at the same time 
+// (function(){
+//     console.log('IIFE ran...');
+// })();
+
+// (function(name){
+//     console.log('Hello ' + name);
+// })('Brad');
+
+//Property Methods
+
+const todo = {
+    add: function(){
+        console.log('Add todo...');
+    },
+    edit: function(id){
+        console.log(`Edit todo ${id}`)
+    }
 }
 
-console.log(`Today is ${day}`);
+todo.delete = function(){
+    console.log('Delete todo')
+}
+
+todo.add();
+todo.edit(22);
+todo.delete();
