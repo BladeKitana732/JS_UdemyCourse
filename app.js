@@ -16,7 +16,7 @@
 //   console.log('Number '+ i);
 // }
 
-// WHILE LOOP
+// WHILE LOOP 
 
 // let i = 0;
 
@@ -65,12 +65,12 @@ const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 
 
 // FOR IN LOOP
-const user = {
-  firstName: 'John', 
-  lastName: 'Doe',
-  age: 40
-}
+// const user = {
+//   firstName: 'John', 
+//   lastName: 'Doe',
+//   age: 40
+// }
 
-for(let x in user){
-  console.log(`${x} : ${user[x]}`);
-}
+// for(let x in user){
+//   console.log(`${x} : ${user[x]}`);
+// }
